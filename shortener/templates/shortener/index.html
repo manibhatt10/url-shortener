@@ -18,10 +18,12 @@
     <ul>
         {% for url in urls %}
             <li>
-                <strong>{{ url.original_url }}</strong> -> 
-                <code>{{ url.short_code }}</code> 
-                ({{ url.clicks }} clicks)
-            </li>
+    <strong>{{ url.original_url }}</strong> -> 
+    <a href="{% url 'redirect' url.short_code %}" target="_blank">
+        {{ request.get_host }}/{{ url.short_code }}
+    </a> 
+    ({{ url.clicks }} clicks)
+</li>
         {% endfor %}
     </ul>
 </body>
