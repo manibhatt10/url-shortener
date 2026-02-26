@@ -1,0 +1,3 @@
+super user vaneko django admin ma sabai permissions vayeko 
+
+pass for superuser: thebigone8, no @ sign
