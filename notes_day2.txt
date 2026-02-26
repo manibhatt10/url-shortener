@@ -7,3 +7,6 @@ django admin-production ready, built in user interface for backend developers to
 being saved correctly without using a database tool
 
 view-python function that takes a web request and returns a web response, like an html page
+
+render(): A shortcut function that combines an HTML template with data from your
+ database to create a final webpage.

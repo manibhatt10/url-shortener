@@ -5,9 +5,23 @@
 </head>
 <body>
     <h1>URL Shortener</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Shorten URL</button>
+    </form>
+
+    <hr>
+
+    <h2>Recent URLs</h2>
     <ul>
         {% for url in urls %}
-            <li>{{ url.original_url }} -> {{ url.short_code }} ({{ url.clicks }} clicks)</li>
+            <li>
+                <strong>{{ url.original_url }}</strong> -> 
+                <code>{{ url.short_code }}</code> 
+                ({{ url.clicks }} clicks)
+            </li>
         {% endfor %}
     </ul>
 </body>
