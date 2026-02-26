@@ -1,3 +1,9 @@
 super user vaneko django admin ma sabai permissions vayeko 
 
 pass for superuser: thebigone8, no @ sign
+
+superuser can bypass all security restrictions
+django admin-production ready, built in user interface for backend developers to verify it data is
+being saved correctly without using a database tool
+
+view-python function that takes a web request and returns a web response, like an html page
