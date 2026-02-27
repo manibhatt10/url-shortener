@@ -10,3 +10,31 @@ view-python function that takes a web request and returns a web response, like a
 
 render(): A shortcut function that combines an HTML template with data from your
  database to create a final webpage.
+
+ What You Must Know by the end of Day 2
+By now, you should understand the "Big Three" files that handle every request on your site:
+
+1. The Model (models.py) - The "Data"
+Concept: This is your database blueprint.
+
+Your Code: You used a class to define that every link needs an original_url and a short_code.
+
+Takeaway: If you want to change what information you store (like adding a "user" field), you do it here.
+
+2. The View (views.py) - The "Brain"
+Concept: This is where the logic happens.
+
+Your Code: You wrote two functions:
+
+index: Handles showing the form and saving new links.
+
+redirect_url: Handles looking up a code, adding a +1 to clicks, and sending the user away.
+
+Takeaway: This is where you write "If X happens, do Y."
+
+3. The Template (index.html) - The "Face"
+Concept: This is the HTML the user sees.
+
+Your Code: You used Django Template Language (the {% %} and {{ }} tags) to display a list of items from your database.
+
+Takeaway: This is where you decide how the data should look to a human.
