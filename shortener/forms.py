@@ -13,7 +13,7 @@ class ShortenerForm(forms.ModelForm):
         'placeholder': 'Custom code (optional)'
     }))
     def clean_short_code(self):
-        short_code=self.cleaned.data.get('short_code')
+        short_code = self.cleaned_data.get('short_code')
         if short_code and ShortenedURL.objects.filter(short_code=short_code).exists():
             raise ValidationError("This custom code is already taken. Please try another.")
         return short_code
