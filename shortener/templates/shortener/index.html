@@ -21,9 +21,14 @@
                                 <button class="btn btn-primary px-4" type="submit">Shorten</button>
                             </div>
                             <div class="text-start text-muted">
-                                <small>Optional: Enter a custom code below</small>
-                                {{ form.short_code }}
-                            </div>
+    <small>Optional: Enter a custom code below</small>
+    {{ form.short_code }}
+    {% if form.short_code.errors %}
+        <div class="text-danger small">
+            {{ form.short_code.errors }}
+        </div>
+    {% endif %}
+</div>
                         </form>
 
                         <hr>
